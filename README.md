@@ -15,7 +15,7 @@ Download the package via one of the following:
 - Our Umbraco [![Our Umbraco project page](https://img.shields.io/badge/our-umbraco-orange.svg)](https://our.umbraco.org/projects/backoffice-extensions/grid-settings/)
 - Appveyor [![Appveyor Build](https://ci.appveyor.com/api/projects/status/wna1x7t9rveb876w?svg=true)](https://ci.appveyor.com/project/jamiepollock/umbraco-grid-settings/build/artifacts)
 
-**Note:** Version 0.2.0+ will only be compatible with Umbraco v7.5.4 minimum.
+**Note:** Version 0.4.0+ will only be compatible with Umbraco v8.3.0 +
 
 ### Usage
 
@@ -37,3 +37,11 @@ Logo created using [Creative Commons](https://creativecommons.org/licenses/by/3.
 
  - [grid by Royyan Wijaya](https://thenounproject.com/icon/927539/)
  - [cog by il Capitano](https://thenounproject.com/icon/727175/)
+
+### Fork notes
+
+msbuild 'default XML namespace' issue with `Umbraco.SqlServerCE.targets` with Visual Studio 2019 :
+
+ - locate the file `..\packages\Umbraco.SqlServerCE.4.0.0.1\build\Umbraco.SqlServerCE.targets`
+ - amend the `<Project>` element to: `<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="15.0">`
+ - alt: check ms build version in use
